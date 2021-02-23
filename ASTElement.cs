@@ -66,7 +66,7 @@ namespace MINIC
             }
         }
 
-        public IEnumerable<ASTElement> GetChildren()
+        public virtual IEnumerable<ASTElement> GetChildren()
         {
             for (int i=0 ; i < m_children.Length ; i++)
             {
@@ -77,14 +77,14 @@ namespace MINIC
             }
         }
 
-        public void AddChild(ASTElement child, int contextIndex)
+        public virtual void AddChild(ASTElement child, int contextIndex)
         {
             child.m_parent.Add(this);
 
             m_children[contextIndex].Add(child);
         }
 
-        public ASTElement GetChild(int context, int index)
+        public virtual ASTElement GetChild(int context, int index)
         {
             return m_children[context][index];
         }

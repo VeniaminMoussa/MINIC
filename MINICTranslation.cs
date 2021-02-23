@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -704,20 +705,6 @@ namespace MINIC
                 }
                 rep.AddCode(node.M_Name, context);
             }
-            // else if (m_scopeCompounds.Count != 0)
-            // {
-            //     if (!FileBuilder.hasGlobalVariable(node.M_Name))
-            //     {
-            //         CCompoundStatement repFunction = m_scopeCompounds.Peek() as CCompoundStatement;
-            //         if (!FileBuilder.hasLocalVariable("0", node.M_Name))
-            //         {
-            //             repFunction.AddCode("float " + node.M_Name + ";\n", CCompoundStatement.CC_COMPOUNDSTATEMENT_DECLARATIONS);
-            //             FileBuilder.DeclareLocalFunvtionVariable("0", node.M_Name);
-            //         }
-            //     }
-            //
-            //     rep.AddCode(node.M_Name, context);
-            // }
             else
             {
                 if (m_functionCalls.Count != 0)

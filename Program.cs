@@ -26,7 +26,7 @@ namespace MINIC
 
             ASTGenerator astgen = new ASTGenerator();
             astgen.Visit(tree);
-
+            
             ASTPrinterVisitor astPrinterVisitor = new ASTPrinterVisitor("test.ast.dot");
             astPrinterVisitor.Visit(astgen.M_Root);
 
